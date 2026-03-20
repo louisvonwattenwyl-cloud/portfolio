@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "sans-serif",
+              ],
+            },
+            colors: {
+              background: "#020617",
+              surface: "#020617",
+              surfaceElevated: "#020617",
+              accent: "#38bdf8",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-400/30"
+  >
+    <div class="relative min-h-screen bg-gradient-to-b from-slate-950 to-slate-950">
+      <div
+        class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(168,85,247,0.16),_transparent_55%)] opacity-70"
+      ></div>
+
+      <header class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          <a href="./index.html" class="flex items-center gap-3 hover:text-cyan-300 transition-colors">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/40">
+              <span class="text-sm font-semibold text-cyan-300">LD</span>
+            </span>
+            <span class="text-sm font-medium text-slate-100">Back to portfolio</span>
+          </a>
+          <span class="text-xs text-slate-400">Project details</span>
+        </div>
+      </header>
+
+      <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div class="mb-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">Technical report</p>
+          <h1 id="project-title" class="mt-3 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl"></h1>
+          <p class="mt-3 text-sm leading-relaxed text-slate-300">
+            Technical content injected for the selected project. Replace the image/PDF link when you have the real files.
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1.4fr,0.9fr]">
+          <section class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Technical Description</p>
+            <ul id="project-bullets" class="mt-3 space-y-2 text-sm text-slate-300"></ul>
+          </section>
+
+          <aside class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Technical Image</p>
+            <div
+              id="project-image"
+              class="mt-2 flex aspect-[16/9] w-full items-center justify-center rounded-xl border border-slate-800/80 bg-slate-950/30 px-4 text-center text-sm text-slate-500"
+            >
+              Technical Image coming soon
+            </div>
+
+            <div class="mt-6">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Full Report</p>
+              <a
+                id="project-pdf"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="mt-2 inline-flex w-full items-center justify-center rounded-xl bg-cyan-400/15 px-4 py-2 text-sm font-medium text-cyan-300 ring-1 ring-cyan-400/30 hover:bg-cyan-400/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+                aria-disabled="true"
+              >
+                View Full Report (PDF)
+              </a>
+              <p id="pdf-note" class="mt-2 text-xs text-slate-400">
+                PDF link coming soon.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("id");
+
+        const projectData = {
+          patek: {
+            title: "Patek Philippe — Master Thesis: R&D Multiphysics Modeling",
+            bullets: [
+              "Focus on FEA, using Ansys Maxwell to capture electrostatic interactions and their coupling to the mechanical response.",
+              "Analyze how electrostatic impacts affect the dynamics, reliability, and performance of high‑precision mechanisms.",
+              "Validate the modeling approach against experimental observations to support the 6/6 grade.",
+              "Deliver a rigorous multiphysics workflow for electrostatic influence on sensitive components."
+            ],
+            imageSrc:
+              "./assets/Capture_d_e_cran_2026-03-19_a__16.04.47-5744adb4-a897-44d5-89ba-2f024767a39f.png",
+          },
+          ems: {
+            title: "EMS — R&D Intern: Disposable Polymer Capsules",
+            bullets: [
+              "Work centered on Fluid Dynamics context for disposable polymer capsule performance.",
+              "Contributed to the technical content behind a filed patent for the capsule technology.",
+              "Targeted stability improvements and achieved a 60% stability gain through iterative design and validation.",
+              "Supported experimental testing and documentation throughout development."
+            ],
+          },
+          cleanroom: {
+            title: "Cleanroom (EPFL) — Fabrication of MEMS Acoustic Resonators",
+            bullets: [
+              "Fabrication of MEMS acoustic resonators using a microfabrication chain.",
+              "Photolithography for precise patterning of functional layers.",
+              "Sputtering deposition and etching steps to define resonator structures.",
+              "Emphasis on process control and repeatability of fabricated devices."
+            ],
+          },
+          musculoskeletal: {
+            title: "Musculoskeletal Project (EPFL)",
+            bullets: [
+              "Technical details coming soon.",
+              "Focus areas to be added when available.",
+              "Add diagrams/results/methods once finalized."
+            ],
+          },
+          mpc: {
+            title: "Model Predictive Control (MPC) (EPFL)",
+            bullets: [
+              "Technical details coming soon.",
+              "Focus areas to be added (constraints, prediction model, control law).",
+              "Add performance metrics and implementation notes when available."
+            ],
+          },
+          mobile-robotics: {
+            title: "Mobile Robotics & Robotics (EPFL)",
+            bullets: [
+              "Technical details coming soon.",
+              "Focus areas to be added (perception, planning, motion control).",
+              "Add experiments and results once finalized."
+            ],
+          },
+          mechanisms: {
+            title: "Conception de mécanismes (EPFL)",
+            bullets: [
+              "Technical details coming soon.",
+              "Focus areas to be added (mechanism design, optimization, tolerances).",
+              "Add drawings/images and key outcomes when ready."
+            ],
+          },
+        };
+
+        const titleEl = document.getElementById("project-title");
+        const bulletsEl = document.getElementById("project-bullets");
+        const imageEl = document.getElementById("project-image");
+        const pdfEl = document.getElementById("project-pdf");
+
+        const data = projectData[projectId];
+        if (!data) {
+          titleEl.textContent = "Project not found";
+          bulletsEl.innerHTML =
+            "<li class='text-slate-400'>No project data found for the provided id.</li>";
+          if (pdfEl) pdfEl.classList.add("opacity-60");
+          return;
+        }
+
+        titleEl.textContent = data.title;
+        bulletsEl.innerHTML = "";
+        (data.bullets || []).forEach((b) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<span class="text-cyan-300">•</span> <span>${b}</span>`;
+          bulletsEl.appendChild(li);
+        });
+
+        if (data.imageSrc) {
+          imageEl.innerHTML = `
+            <img
+              src="${data.imageSrc}"
+              alt="${data.title} technical image"
+              class="h-full w-full rounded-xl object-contain"
+            />
+          `;
+        }
+      })();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>R&D Engineer Portfolio – Louis de Watteville</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "Inter",
+              "system-ui",
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "Segoe UI",
+              "sans-serif",
+            ],
+          },
+          colors: {
+            background: "#020617",
+            surface: "#020617",
+            surfaceElevated: "#020617",
+            accent: "#38bdf8",
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-400/30">
+  <div class="relative min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-slate-950">
+    <!-- Glow background -->
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(168,85,247,0.16),_transparent_55%)] opacity-70">
+    </div>
+
+    <!-- Shell -->
+    <header class="sticky top-0 z-30 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/10 ring-1 ring-cyan-400/40">
+            <span class="text-sm font-semibold text-cyan-300">LD</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-sm font-medium text-slate-100">
+              Louis de Watteville
+            </span>
+            <span class="text-xs text-slate-400">
+              R&D Engineer & Multiphysics Modeling
+            </span>
+          </div>
+        </div>
+
+        <nav
+          class="flex items-center gap-4 overflow-x-auto text-xs text-slate-300 sm:gap-6 sm:text-sm md:overflow-visible">
+          <a href="#home" class="whitespace-nowrap hover:text-cyan-300 transition-colors">Home</a>
+          <a href="#experience" class="whitespace-nowrap hover:text-cyan-300 transition-colors">Experience</a>
+          <a href="#academic-projects" class="whitespace-nowrap hover:text-cyan-300 transition-colors">Projects</a>
+          <a href="#skills" class="whitespace-nowrap hover:text-cyan-300 transition-colors">Skills</a>
+          <a href="#contact" class="whitespace-nowrap hover:text-cyan-300 transition-colors">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+      <!-- Hero / Home -->
+      <section id="home"
+        class="mb-14 grid gap-10 border-b border-slate-800/80 pb-10 md:grid-cols-[minmax(0,1.3fr),minmax(0,1fr)] md:items-center lg:gap-16">
+        <div>
+          <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            Portfolio
+          </p>
+          <h1 class="mb-4 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-5xl">
+            R&amp;D Engineer focused on
+            <span class="text-cyan-300">multiphysics modeling</span> &
+            precision mechanisms.
+          </h1>
+          <p class="max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            Bridging advanced simulation, cleanroom fabrication and
+            mechatronic design. I work at the interface of
+            <span class="font-medium text-slate-100">finite element analysis, high‑precision watchmaking</span>
+            and
+            <span class="font-medium text-slate-100">medical device innovation</span>.
+          </p>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 shadow-[0_18px_45px_rgba(15,23,42,0.75)]">
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_0,_rgba(56,189,248,0.3),_transparent_55%),radial-gradient(circle_at_90%_100%,_rgba(168,85,247,0.35),_transparent_60%)] opacity-70">
+          </div>
+          <div class="relative space-y-3 text-xs text-slate-200">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="rounded-full bg-slate-900/80 px-2.5 py-1 text-slate-300">
+                Snapshot
+              </span>
+              <span class="text-slate-400">R&amp;D focus</span>
+            </div>
+            <dl class="grid gap-3 text-xs sm:grid-cols-2">
+              <div class="rounded-xl bg-slate-900/70 p-3 ring-1 ring-slate-800">
+                <dt class="text-[11px] uppercase tracking-[0.16em] text-slate-400">
+                  Core domains
+                </dt>
+                <dd class="mt-1 text-sm text-slate-100">
+                  Multiphysics FEA, precision mechanisms, MEMS, robotics.
+                </dd>
+              </div>
+              <div class="rounded-xl bg-slate-900/70 p-3 ring-1 ring-slate-800">
+                <dt class="text-[11px] uppercase tracking-[0.16em] text-slate-400">
+                  Environments
+                </dt>
+                <dd class="mt-1 text-sm text-slate-100">
+                  Cleanroom, medical devices, high‑end watchmaking.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience / Internships -->
+      <section id="experience" class="mb-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
+              Internships &amp; Industry Experience
+            </h2>
+            <p class="mt-1 text-xs text-slate-400">
+              Focus on R&amp;D, multiphysics modeling and product development.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Patek Philippe -->
+          <article data-project-modal="patek"
+            class="group flex flex-col gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 project-card cursor-pointer transition-all hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40">
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex gap-3">
+                <div class="h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-slate-700 bg-white p-1">
+                  <img src="./assets/pp.png" alt="Patek Philippe Logo" class="h-full w-full object-contain" />
+                </div>
+
+                <div>
+                  <h3 class="text-sm font-semibold text-slate-100 group-hover:text-cyan-300 transition-colors">
+                    R&D Multiphysics Modeling (Master Thesis)
+                  </h3>
+                  <p class="text-[11px] text-slate-400">
+                    Patek Philippe • 6 months (2025)
+                  </p>
+                </div>
+              </div>
+              <span
+                class="inline-flex items-center rounded-full border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-0.5 text-[11px] font-medium text-emerald-300">
+                Grade 6 / 6
+              </span>
+            </div>
+
+            <p class="text-xs leading-relaxed text-slate-300 sm:text-sm">
+              R&D thesis on
+              <span class="font-medium text-slate-100">multiphysics finite element analysis (FEA)</span>
+              for high‑precision watch mechanisms. Focus on
+              <span class="font-medium text-slate-100">electrostatic interactions and their impact on the dynamics and
+                reliability</span>
+              of complex micro‑mechanical assemblies.
+            </p>
+
+            <div class="mt-1 flex flex-col gap-3">
+              <ul class="space-y-1.5 text-xs text-slate-300">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-300">•</span>
+                  <span>Ansys multiphysics: mechanical–electrostatic coupling + thermo‑mechanical effects.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-300">•</span>
+                  <span>V&amp;V lab protocols correlating experiments with simulations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-300">•</span>
+                  <span>Silinvar value‑chain audit: process risks + mitigations.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-300">•</span>
+                  <span>IP study: IP reviews + Freedom‑to‑Operate (FTO) assessment.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-300">•</span>
+                  <span>Reference report on electrostatic risks + design guidelines (6/6).</span>
+                </li>
+              </ul>
+
+              <div
+                class="relative h-48 w-full overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950/30 sm:h-56">
+                <img src="./assets/patek_resume.png" alt="Patek Philippe technical image"
+                  class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  loading="eager" />
+              </div>
+
+              <div class="mt-1 flex items-center justify-between">
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="rounded-full bg-slate-900/70 px-2.5 py-0.5 text-[10px] text-slate-300">FEA</span>
+                  <span
+                    class="rounded-full bg-slate-900/70 px-2.5 py-0.5 text-[10px] text-slate-300">Electrostatics</span>
+                </div>
+
+                <span
+                  class="flex items-center gap-1 text-[10px] font-medium uppercase tracking-wider text-slate-500 group-hover:text-cyan-400 transition-colors">
+                  More details
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+          <!-- EMS -->
+          <article
+            class="flex flex-col gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="ems" tabindex="0" role="button"
+            aria-label="Open project details: EMS — Disposable Polymer Capsules">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h3 class="text-sm font-semibold text-slate-100">
+                  R&amp;D Intern – Disposable Polymer Capsules
+                </h3>
+                <p class="text-xs text-slate-400">EMS – Medical / pharmaceutical domain</p>
+              </div>
+              <span
+                class="inline-flex items-center rounded-full border border-cyan-400/40 bg-cyan-400/10 px-2.5 py-0.5 text-[11px] font-medium text-cyan-300">
+                Patent filed
+              </span>
+            </div>
+            <p class="text-xs leading-relaxed text-slate-300 sm:text-sm">
+              Developed the
+              <span class="font-medium text-slate-100">first generation of disposable polymer capsules</span>
+              for EMS, from concept to validation. Work led to a
+              <span class="font-medium text-slate-100">filed patent</span> and a
+              <span class="font-medium text-emerald-300">60% improvement in stability</span>
+              of the system.
+            </p>
+            <ul class="mt-1 space-y-1.5 text-xs text-slate-300">
+              <li>
+                • Contributed to the mechanical design and material selection for disposable
+                capsules.
+              </li>
+              <li>
+                • Designed and executed stability tests, quantifying a 60% performance
+                improvement.
+              </li>
+              <li>
+                • Participated in patent preparation, documenting technical innovations and
+                design decisions.
+              </li>
+            </ul>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-slate-900/70 px-2.5 py-0.5 text-[11px] text-slate-300">Product
+                development</span>
+              <span class="rounded-full bg-slate-900/70 px-2.5 py-0.5 text-[11px] text-slate-300">Medical device
+                context</span>
+              <span class="rounded-full bg-slate-900/70 px-2.5 py-0.5 text-[11px] text-slate-300">Experimental
+                validation</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Academic Projects -->
+      <section id="academic-projects" class="mb-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
+              Academic Projects – EPFL
+            </h2>
+            <p class="mt-1 text-xs text-slate-400">
+              Representative coursework and projects bridging theory and hands‑on work.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Cleanroom -->
+          <article
+            class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="cleanroom" tabindex="0" role="button"
+            aria-label="Open project details: Cleanroom — MEMS Acoustic Resonators">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Cleanroom – MEMS Acoustic Resonators
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300">
+              Fabrication of
+              <span class="font-medium text-slate-100">MEMS acoustic resonators</span> using
+              a full microfabrication chain:
+              <span class="font-medium text-slate-100">photolithography, sputtering and etching</span>.
+            </p>
+            <p class="mt-1 text-[11px] text-slate-400">
+              Emphasis on process control, cleanroom protocol and translating device physics
+              into robust fabrication steps.
+            </p>
+          </article>
+
+          <!-- Musculoskeletal -->
+          <article
+            class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="musculoskeletal" tabindex="0" role="button"
+            aria-label="Open project details: Musculoskeletal Project">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Musculoskeletal Project
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300">
+              Technical details coming soon – focusing on biomechanical modeling and
+              analysis of musculoskeletal systems.
+            </p>
+          </article>
+
+          <!-- MPC -->
+          <article
+            class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="mpc" tabindex="0" role="button"
+            aria-label="Open project details: Model Predictive Control (MPC)">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Model Predictive Control (MPC)
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300">
+              Technical details coming soon – focused on constrained control design and
+              prediction‑based regulation strategies.
+            </p>
+          </article>
+
+          <!-- Mobile Robotics & Robotics -->
+          <article
+            class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="mobile-robotics" tabindex="0" role="button"
+            aria-label="Open project details: Mobile Robotics & Robotics">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Mobile Robotics &amp; Robotics
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300">
+              Technical details coming soon – covering perception, motion planning and
+              control for mobile and articulated robotic systems.
+            </p>
+          </article>
+
+          <!-- Conception de mécanismes -->
+          <article
+            class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 project-card cursor-pointer transition-colors hover:border-cyan-400/25 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+            data-project-modal="mechanisms" tabindex="0" role="button"
+            aria-label="Open project details: Conception de mécanismes">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Conception de mécanismes
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300">
+              Technical details coming soon – focused on the design and optimization of
+              mechanical linkages and precision mechanisms.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Personal / Entrepreneurship -->
+      <section id="personal" class="mb-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
+              Personal &amp; Entrepreneurship
+            </h2>
+            <p class="mt-1 text-xs text-slate-400">
+              Applying engineering skills to real‑world medical innovation.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-[minmax(0,1.4fr),minmax(0,1fr)]">
+          <article class="flex flex-col gap-3 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5">
+            <h3 class="text-sm font-semibold text-slate-100">
+              Startup Project – Medical Device for Opioid Therapy
+            </h3>
+            <p class="text-xs leading-relaxed text-slate-300 sm:text-sm">
+              Co‑led the development of a
+              <span class="font-medium text-slate-100">medical device for opioid therapy</span>, at the intersection of
+              engineering, clinical requirements and product
+              strategy.
+            </p>
+            <ul class="mt-1 space-y-1.5 text-xs text-slate-300">
+              <li>
+                • Coordinated technical workstreams and contributed to system architecture
+                and risk analysis.
+              </li>
+              <li>
+                • Helped translate user needs and clinical constraints into technical
+                specifications.
+              </li>
+              <li>
+                • Exposed to regulatory and business considerations around medical devices.
+              </li>
+            </ul>
+          </article>
+
+          <div class="flex flex-col justify-between gap-4 rounded-2xl border border-slate-800/80 bg-slate-950/60 p-5">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                Focus
+              </p>
+              <p class="mt-1 text-sm text-slate-100">
+                Engineering leadership in early‑stage, regulated environments.
+              </p>
+            </div>
+            <p class="text-xs text-slate-400">
+              This project combines systems thinking, human‑factors awareness and a clear
+              view of medical requirements — skills I bring back into R&amp;D roles in
+              industry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Skills -->
+      <section id="skills" class="mb-14">
+        <div class="mb-6 flex items-baseline justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
+              Global Skills
+            </h2>
+            <p class="mt-1 text-xs text-slate-400">
+              Tools and capabilities I use across projects.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Simulation -->
+          <article class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4">
+            <h3 class="text-sm font-semibold text-slate-100">Simulation</h3>
+            <p class="text-xs text-slate-300">
+              Ansys Mechanical, Ansys Maxwell, Workbench; CFD with Autodesk tools.
+            </p>
+            <p class="mt-1 text-[11px] text-slate-400">
+              Experienced in setting up robust multiphysics and CFD studies to support
+              design decisions.
+            </p>
+          </article>
+
+          <!-- CAD -->
+          <article class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4">
+            <h3 class="text-sm font-semibold text-slate-100">CAD &amp; Mechanical Design</h3>
+            <p class="text-xs text-slate-300">
+              SolidWorks, Catia, Fusion 360 for detailed part and assembly design.
+            </p>
+            <p class="mt-1 text-[11px] text-slate-400">
+              From concept sketches to manufacturable designs for precision and medical
+              applications.
+            </p>
+          </article>
+
+          <!-- Languages -->
+          <article class="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4">
+            <h3 class="text-sm font-semibold text-slate-100">Languages</h3>
+            <dl class="space-y-1.5 text-xs text-slate-300">
+              <div class="flex items-center justify-between gap-4">
+                <dt>French</dt>
+                <dd class="text-[11px] text-slate-400">C2</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <dt>English</dt>
+                <dd class="text-[11px] text-slate-400">C1</dd>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <dt>German</dt>
+                <dd class="text-[11px] text-slate-400">A2</dd>
+              </div>
+            </dl>
+            <p class="mt-1 text-[11px] text-slate-400">
+              Comfortable working in multilingual teams and documenting work in French or
+              English.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="mb-6">
+        <div
+          class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-5 sm:p-6 lg:flex lg:items-center lg:justify-between lg:gap-8">
+          <div>
+            <h2 class="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl">
+              Contact
+            </h2>
+            <p class="mt-1 max-w-xl text-xs leading-relaxed text-slate-300 sm:text-sm">
+              Interested in R&amp;D roles at the intersection of multiphysics simulation,
+              precision mechanisms and medical devices. Feel free to reach out for
+              collaborations, internships or full‑time opportunities.
+            </p>
+          </div>
+          <div class="mt-4 flex flex-col gap-2 text-xs text-slate-300 lg:mt-0">
+            <p class="text-[11px] uppercase tracking-[0.18em] text-slate-400">
+              How to reach me
+            </p>
+            <p class="text-xs text-slate-400">
+              Add your email / LinkedIn / GitHub here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-4 border-t border-slate-900/80 pt-4">
+        <p class="text-[11px] text-slate-500">
+          ©
+          <span id="year"></span>
+          Louis de Watteville. All rights reserved.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden" aria-hidden="true">
+    <div id="project-modal-backdrop" class="absolute inset-0 bg-slate-950/70" aria-hidden="true"></div>
+
+    <div class="relative mx-auto flex min-h-full max-w-2xl items-center p-4">
+      <div id="project-modal-panel" role="dialog" aria-modal="true" aria-labelledby="project-modal-title"
+        class="w-full max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-800/80 bg-slate-950/95 backdrop-blur p-5 shadow-[0_18px_45px_rgba(15,23,42,0.9)] sm:p-6">
+        <button id="project-modal-close" type="button"
+          class="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-800/80 bg-slate-900/40 text-slate-200 hover:bg-slate-900/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40"
+          aria-label="Close modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
+            <path d="M18 6L6 18"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <h2 id="project-modal-title" class="pr-10 text-2xl font-semibold tracking-tight text-slate-50">
+          Project Title
+        </h2>
+
+        <div class="mt-4">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+            Technical Description
+          </p>
+          <ul id="project-modal-bullets" class="mt-3 space-y-2 text-sm text-slate-300"></ul>
+        </div>
+
+        <div class="mt-5">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+            Technical Image
+          </p>
+          <div id="project-modal-image"
+            class="mt-2 flex aspect-[16/9] w-full items-center justify-center rounded-xl border border-slate-800/80 bg-slate-900/40 px-4 text-center text-sm text-slate-500">
+            Technical Image coming soon
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-2 sm:flex-row sm:justify-end">
+          <a id="project-modal-pdf" href="#" target="_blank" rel="noopener" data-disabled="true"
+            class="inline-flex items-center justify-center rounded-xl bg-cyan-400/15 px-4 py-2 text-sm font-medium text-cyan-300 ring-1 ring-cyan-400/30 hover:bg-cyan-400/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/40">
+            View Full Report (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+  <script>
+    // Small enhancement: dynamic year in footer
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear().toString();
+  </script>
+</body>
+
+</html>

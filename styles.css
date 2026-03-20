@@ -1,0 +1,79 @@
+:root {
+  color-scheme: light dark;
+  --bg: #050816;
+  --bg-soft: #0f172a;
+  --fg: #e5e7eb;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
+  --border-subtle: rgba(148, 163, 184, 0.6);
+  --radius-lg: 18px;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, #0b1120 0, #020617 48%, #000 100%);
+  color: var(--fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  width: min(960px, 100% - 3rem);
+  margin: 3rem auto;
+  padding: 3rem clamp(2.25rem, 3vw, 3rem);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.12) 0, transparent 55%),
+    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.16) 0, transparent 52%);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  letter-spacing: 0.03em;
+}
+
+p {
+  margin: 0;
+  max-width: 38rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+@media (max-width: 600px) {
+  .page {
+    margin: 2.25rem auto;
+    padding: 2.25rem 1.75rem;
+  }
+}
+
